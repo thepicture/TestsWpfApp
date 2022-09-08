@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Printing;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -18,12 +19,18 @@ namespace TestsWpfApp
         public HardwarePage()
         {
             InitializeComponent();
-            UpdateHardwareGrid();
+            Task.Run(() => UpdateHardwareGrid());
+            Task.Run(() => UpdateHardwareChart());
+        }
+
+        private void UpdateHardwareChart()
+        {
+
             Random random = new Random();
             for (int i = 0; i < 128; i++)
             {
-                HardwaresChart.Series[0].Points.AddXY(Guid.NewGuid().ToString(), random.Next(0, 32));
-                HardwaresChart.Series[1].Points.AddXY(Guid.NewGuid().ToString(), random.Next(0, 64));
+                Dispatcher.Invoke(() => HardwaresChart.Series[0].Points.AddXY(Guid.NewGuid().ToString(), random.Next(0, 32)));
+                Dispatcher.Invoke(() => HardwaresChart.Series[1].Points.AddXY(Guid.NewGuid().ToString(), random.Next(0, 64)));
             }
         }
 
@@ -40,7 +47,7 @@ namespace TestsWpfApp
                 };
                 return pair;
             });
-            HardwareGrid.ItemsSource = items;
+            Dispatcher.Invoke(() => HardwareGrid.ItemsSource = items);
         }
 
         /// <summary>
