@@ -1,0 +1,9 @@
+﻿<Application x:Class="TestsWpfApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TestsWpfApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="Amatic">/Fonts/#Amatic</FontFamily>
+    </Application.Resources>
+</Application>
