@@ -3,11 +3,11 @@
 namespace TestsWpfApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NavigationWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NavigationWindow : Window
     {
-        public MainWindow()
+        public NavigationWindow()
         {
             InitializeComponent();
             NavigationFrame.Navigate(new ProcessorWatchPage());
@@ -17,11 +17,6 @@ namespace TestsWpfApp
         private void OnBack(object sender, RoutedEventArgs e)
         {
             NavigationFrame.GoBack();
-        }
-
-        private void NavigateToSerialPortPage(object sender, RoutedEventArgs e)
-        {
-            NavigationFrame.Navigate(new SerialPortPage());
         }
 
         private void OnFrameRendered(object sender, System.EventArgs e)
@@ -35,6 +30,21 @@ namespace TestsWpfApp
         private void NavigateToVideoStreamPage(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new VideoStreamPage());
+        }
+
+        private void NavigateToHardwarePage(object sender, RoutedEventArgs e)
+        {
+            NavigationFrame.Navigate(new HardwarePage());
+        }
+
+        private void NavigateToProcessesPage(object sender, RoutedEventArgs e)
+        {
+            NavigationFrame.Navigate(new ProcessesListPage());
+        }
+
+        private void NavigateToProcessorWatchPage(object sender, RoutedEventArgs e)
+        {
+            NavigationFrame.Navigate(new ProcessorWatchPage());
         }
     }
 }

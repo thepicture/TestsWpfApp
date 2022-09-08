@@ -68,27 +68,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="HardwarePage.xaml.cs">
+    <Compile Include="Pages\HardwarePage.xaml.cs">
       <DependentUpon>HardwarePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Common.cs" />
-    <Compile Include="ProcessesListPage.xaml.cs">
+    <Compile Include="Pages\ProcessesListPage.xaml.cs">
       <DependentUpon>ProcessesListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProcessorWatchPage.xaml.cs">
+    <Compile Include="Pages\ProcessorWatchPage.xaml.cs">
       <DependentUpon>ProcessorWatchPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerialPortPage.xaml.cs">
-      <DependentUpon>SerialPortPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="VideoStreamPage.xaml.cs">
+    <Compile Include="Pages\VideoStreamPage.xaml.cs">
       <DependentUpon>VideoStreamPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="HardwarePage.xaml">
+    <Page Include="Pages\HardwarePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\NavigationWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -96,23 +93,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Windows\NavigationWindow.xaml.cs">
+      <DependentUpon>NavigationWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ProcessesListPage.xaml">
+    <Page Include="Pages\ProcessesListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProcessorWatchPage.xaml">
+    <Page Include="Pages\ProcessorWatchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SerialPortPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="VideoStreamPage.xaml">
+    <Page Include="Pages\VideoStreamPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,4 +1,4 @@
-﻿<Window x:Class="TestsWpfApp.MainWindow"
+﻿<Window x:Class="TestsWpfApp.NavigationWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -17,15 +17,25 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Center"
+        <WrapPanel HorizontalAlignment="Center"
                     Orientation="Horizontal">
-            <Button Content="To SerialPort page"
-                    Click="NavigateToSerialPortPage"
+            <Button Content="To VideoStream page"
+                    Click="NavigateToVideoStreamPage"
                     Margin="5"
                     Width="200"
                     HorizontalAlignment="Left" />
-            <Button Content="To VideoStream page"
-                    Click="NavigateToVideoStreamPage"
+            <Button Content="To Hardware page"
+                    Click="NavigateToHardwarePage"
+                    Margin="5"
+                    Width="200"
+                    HorizontalAlignment="Left" />
+            <Button Content="To Processes page"
+                    Click="NavigateToProcessesPage"
+                    Margin="5"
+                    Width="200"
+                    HorizontalAlignment="Left" />
+            <Button Content="To Processor Watch page"
+                    Click="NavigateToProcessorWatchPage"
                     Margin="5"
                     Width="200"
                     HorizontalAlignment="Left" />
@@ -35,7 +45,7 @@
                     Margin="5"
                     Width="200"
                     HorizontalAlignment="Right" />
-        </StackPanel>
+        </WrapPanel>
         <Frame x:Name="NavigationFrame"
                NavigationUIVisibility="Hidden"
                Grid.Row="1"
